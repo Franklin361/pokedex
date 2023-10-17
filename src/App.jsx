@@ -1,4 +1,5 @@
 import { Header } from './components/header'
+import { ListPokemon } from './components/list-pokemon'
 import { SearchInput } from './components/search-input'
 
 const App = () => {
@@ -9,7 +10,7 @@ const App = () => {
 
       <SearchInput />
 
-
+      <ListPokemon />
     </div>
   )
 }
