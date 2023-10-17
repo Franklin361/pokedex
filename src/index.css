@@ -7,3 +7,11 @@
 html {
   font-family: 'Montserrat', sans-serif;
 }
+
+.check:checked~div {
+  @apply bg-green-200
+}
+
+.check:checked~div>.icon-checked {
+  @apply block
+}
