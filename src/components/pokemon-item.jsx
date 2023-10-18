@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 import { BiSave } from 'react-icons/bi'
+import { useCollectionPokemonStore } from '../store/collection-store'
 
 export const PokemonItem = ({ pokemon }) => {
 
+  const addPokemon = useCollectionPokemonStore(state => state.addPokemon)
 
   const img_pokemon = `https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name}.gif`
   const hp = pokemon.stats[0]?.base_stat;
@@ -13,6 +15,10 @@ export const PokemonItem = ({ pokemon }) => {
   const powers = pokemon.abilities.map((ability) => (
     <span key={ability.ability.name}>{ability.ability.name}</span>
   ))
+
+  const handleClick = () => {
+    addPokemon(pokemon)
+  }
 
   return (
 
@@ -34,7 +40,10 @@ export const PokemonItem = ({ pokemon }) => {
         <div className='flex gap-5'>
           {powers}
         </div>
-        <button className='flex-1 flex justify-center items-center gap-2 text-lg border bg-purple-700 hover:bg-purple-800 p-3 rounded-lg font-semibold text-white'>
+        <button
+          className='flex-1 flex justify-center items-center gap-2 text-lg border bg-purple-700 hover:bg-purple-800 p-3 rounded-lg font-semibold text-white'
+          onClick={handleClick}
+        >
           <BiSave className='w-7 h-7' />
           Add to collection
         </button>
