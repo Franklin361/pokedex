@@ -1,4 +1,4 @@
-import { useCollectionPokemonStore } from '../store/collection-store'
+import { useCollectionPokemonStore } from '../../store/collection-store'
 
 export const ChartCollection = () => {
 
