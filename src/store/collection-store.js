@@ -16,7 +16,9 @@ export const useCollectionPokemonStore = create(
       removePokemon: (idPokemon) => {
         set(state => ({ pokemons: state.pokemons.filter(pokemon => pokemon.id !== idPokemon) }))
       },
-
+      clearCollectionStorage: () => {
+        set({ pokemons: [] })
+      }
     }),
     {
       name: 'collection-storage'

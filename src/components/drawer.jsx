@@ -7,6 +7,7 @@ export const Drawer = () => {
 
   const [open, setOpen] = useState(false)
   const pokemonsCollection = useCollectionPokemonStore(state => state.pokemons)
+  const clearCollectionStorage = useCollectionPokemonStore(state => state.clearCollectionStorage)
 
   return (
     <div>
@@ -34,7 +35,10 @@ export const Drawer = () => {
             <header className='flex flex-col gap-7 px-10 pt-5'>
               <h2 className='text-center text-5xl font-extrabold'>Pokémon Collection</h2>
               <div className='flex justify-between items-center gap-5'>
-                <button className='border font-semibold border-rose-500 text-rose-500 rounded-md flex justify-center items-center gap-2 p-3 hover:bg-rose-500 hover:text-white transition-all flex-1'>
+                <button
+                  className='border font-semibold border-rose-500 text-rose-500 rounded-md flex justify-center items-center gap-2 p-3 hover:bg-rose-500 hover:text-white transition-all flex-1'
+                  onClick={() => clearCollectionStorage()}
+                >
                   <BsTrash className='w-5 h-5' />
                   Clear collection
                 </button>
