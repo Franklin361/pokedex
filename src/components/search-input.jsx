@@ -16,7 +16,7 @@ export const SearchInput = ({ onSearch, isLoading }) => {
             {...form.register('name', { required: true })}
             autoFocus
             type="text"
-            className='flex-1 w-full md:p-3 p-2 bg-transparent md:text-3xl text-xl text-black font-semibold rounded-md outline-none'
+            className='flex-1 w-full md:p-3 p-2 md:pl-5 bg-transparent md:text-3xl text-xl text-black font-semibold rounded-md outline-none'
             placeholder='Pokémon name'
             disabled={isLoading}
           />

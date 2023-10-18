@@ -1,40 +1,43 @@
-import { useState } from 'react'
-import { Header } from './components/header'
-import { PokemonDetails } from './components/pokemon-details'
-import { SearchInput } from './components/search-input'
+import { Toaster } from 'react-hot-toast';
+import { PokemonNotFound } from './components/error';
+import { Header } from './components/header';
+import { LoadingPokemon } from './components/loading';
+import { PokemonDetails } from './components/pokemon-details';
+import { SearchInput } from './components/search-input';
+import { usePokemon } from './hook/usePokemon';
 
 const App = () => {
 
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState(false)
-  const [pokemon, setPokemon] = useState(null)
-
-  const handleSearch = async (name = '') => {
-    if (name.trim().length === 0) return null
-    try {
-      setError(false)
-      setIsLoading(true)
-      const data = await (await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`)).json()
-      setPokemon(data)
-    } catch (error) {
-      setError(true)
-    } finally {
-      setIsLoading(false)
-    }
-  }
+  const {
+    isLoading,
+    error,
+    pokemon,
+    handleSearch
+  } = usePokemon()
 
   return (
-    <div className='lg:max-w-[900px] md:max-w-[700px] max-w-[400px] mx-auto my-5'>
+    <div className='lg:max-w-[900px] md:max-w-[700px] max-w-[400px] mx-auto md:my-10 my-5'>
 
       <Header />
+
       <SearchInput
         onSearch={handleSearch}
         isLoading={isLoading}
       />
-      {isLoading && <span className='text-center font-bold block'>Search results</span>}
-      {error && <span className='text-center font-bold block'>Pokemon not found</span>}
-      {(pokemon && !error && !isLoading) && <PokemonDetails pokemon={pokemon} />}
 
+      <LoadingPokemon isLoading={isLoading} />
+      <PokemonNotFound error={error} />
+
+      {
+        (pokemon && !error && !isLoading) && <PokemonDetails pokemon={pokemon} />
+      }
+
+      <Toaster toastOptions={{
+        duration: 1500,
+        position: 'bottom-left',
+        id: 'unique',
+        className: 'bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white'
+      }} />
     </div>
   )
 }
