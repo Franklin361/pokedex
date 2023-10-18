@@ -10,7 +10,12 @@ export const PokemonDetails = ({ pokemon }) => {
   const hp = pokemon.stats[0]?.base_stat;
   const attack = pokemon.stats[1]?.base_stat;
   const defense = pokemon.stats[2]?.base_stat;
-  const height = pokemon.stats[2]?.base_stat;
+  const height = pokemon.height;
+  const weight = pokemon.weight;
+
+  const type = pokemon.types.map(({ type }) => (
+    <span key={type.name}>{type.name}</span>
+  ))
 
   const powers = pokemon.abilities.map((ability) => (
     <span key={ability.ability.name}>{ability.ability.name}</span>
@@ -38,6 +43,8 @@ export const PokemonDetails = ({ pokemon }) => {
           <p>attack: {attack}</p>
           <p>defense: {defense}</p>
           <p>height: {height}</p>
+          <p>weight: {weight}</p>
+          <p>type: {type}</p>
           <span>powers</span>
           <div className='flex gap-5 flex-col'>
             {powers}

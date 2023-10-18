@@ -14,7 +14,7 @@ const App = () => {
     try {
       setError(false)
       setIsLoading(true)
-      const data = await (await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)).json()
+      const data = await (await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`)).json()
       setPokemon(data)
     } catch (error) {
       setError(true)
@@ -34,6 +34,7 @@ const App = () => {
       {isLoading && <span className='text-center font-bold block'>Search results</span>}
       {error && <span className='text-center font-bold block'>Pokemon not found</span>}
       {(pokemon && !error && !isLoading) && <PokemonDetails pokemon={pokemon} />}
+
     </div>
   )
 }

@@ -31,6 +31,22 @@ body {
   background-position: -50px;
 }
 
+tbody td {
+  padding: 1.4em !important;
+  transform-origin: left;
+  animation: revealing-bars 4s linear 1;
+}
+
+@keyframes revealing-bars {
+  0% {
+    transform: scaleX(0);
+  }
+
+  15% {
+    transform: scaleX(1);
+  }
+}
+
 
 .check:checked~div {
   @apply bg-green-200
