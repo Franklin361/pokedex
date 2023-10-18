@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Header } from './components/header'
-import { PokemonItem } from './components/pokemon-item'
+import { PokemonDetails } from './components/pokemon-details'
 import { SearchInput } from './components/search-input'
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
       />
       {isLoading && <span>Search results</span>}
       {error && <span>Pokemon not found</span>}
-      {(pokemon && !error && !isLoading) && <PokemonItem pokemon={pokemon} />}
+      {(pokemon && !error && !isLoading) && <PokemonDetails pokemon={pokemon} />}
     </div>
   )
 }

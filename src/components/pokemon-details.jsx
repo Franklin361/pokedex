@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { BiSave } from 'react-icons/bi'
 import { useCollectionPokemonStore } from '../store/collection-store'
 
-export const PokemonItem = ({ pokemon }) => {
+export const PokemonDetails = ({ pokemon }) => {
 
   const addPokemon = useCollectionPokemonStore(state => state.addPokemon)
 
@@ -52,6 +52,6 @@ export const PokemonItem = ({ pokemon }) => {
   )
 }
 
-PokemonItem.propTypes = {
+PokemonDetails.propTypes = {
   pokemon: PropTypes.object.isRequired
 }
