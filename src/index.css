@@ -8,6 +8,30 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  @apply bg-gray-100
+}
+
+.custom-bg-details {
+  background-image: url('./assets/blob-scene-haikei.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.custom-bg {
+  background-image: url('./assets/wave-haikei.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.custom-bg-drawer {
+  background-image: url('./assets/blob-haikei.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -50px;
+}
+
+
 .check:checked~div {
   @apply bg-green-200
 }

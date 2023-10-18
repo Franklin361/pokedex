@@ -24,16 +24,15 @@ const App = () => {
   }
 
   return (
-    <div className='container mx-auto py-5'>
+    <div className='lg:max-w-[900px] md:max-w-[700px] max-w-[400px] mx-auto my-5'>
 
       <Header />
-
       <SearchInput
         onSearch={handleSearch}
         isLoading={isLoading}
       />
-      {isLoading && <span>Search results</span>}
-      {error && <span>Pokemon not found</span>}
+      {isLoading && <span className='text-center font-bold block'>Search results</span>}
+      {error && <span className='text-center font-bold block'>Pokemon not found</span>}
       {(pokemon && !error && !isLoading) && <PokemonDetails pokemon={pokemon} />}
     </div>
   )

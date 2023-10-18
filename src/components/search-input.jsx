@@ -11,18 +11,19 @@ export const SearchInput = ({ onSearch, isLoading }) => {
   return (
     <section className='my-10'>
       <form onSubmit={form.handleSubmit(handleSubmit)}>
-        <div className='flex bg-gray-300 w-full rounded-md border-[2px] border-black/50 focus:border-transparent justify-center items-center' >
+        <div className='md:flex grid grid-cols-[1fr,auto] bg-gray-50 w-full rounded-md border-[2px] border-black/50 justify-center items-center shadow-lg shadow-black/50' >
           <input
             {...form.register('name', { required: true })}
+            autoFocus
             type="text"
-            className='flex-1 p-3 bg-transparent text-3xl text-black font-semibold rounded-md outline-none'
+            className='flex-1 w-full md:p-3 p-2 bg-transparent md:text-3xl text-xl text-black font-semibold rounded-md outline-none'
             placeholder='Pokémon name'
             disabled={isLoading}
           />
           {
             isLoading
-              ? <BiLoaderCircle className='w-8 h-8 mr-3 animate-spin text-purple-800' />
-              : <BiSearch className='w-8 h-8 mr-3' />
+              ? <BiLoaderCircle className='md:w-8 w-5 md:h-8 h-5 mr-3 animate-spin text-purple-800' />
+              : <BiSearch className='md:w-8 w-5 md:h-8 h-5 mr-3' />
           }
         </div>
         {form.formState.errors?.name && (
