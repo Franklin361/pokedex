@@ -3,7 +3,7 @@ import { BsBarChart, BsCheck, BsCircle, BsCollection, BsEye, BsTrash } from 'rea
 
 export const Drawer = () => {
 
-  const [open, setOpen] = useState(!false)
+  const [open, setOpen] = useState(false)
 
   return (
     <div>
