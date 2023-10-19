@@ -8,12 +8,14 @@ export const usePokemon = () => {
 
   const handleSearch = async (name = '') => {
     if (name.trim().length === 0) return null
+
     try {
       setError(false)
       setIsLoading(true)
       const data = await getPokemonByName(name)
       setPokemon(data)
     } catch (error) {
+      console.log(error)
       setError(true)
     } finally {
       setIsLoading(false)

@@ -28,8 +28,8 @@ export const PokemonPresentation = (props) => {
 
 PokemonPresentation.propTypes = {
   name: PropTypes.string.isRequired,
-  height: PropTypes.string,
-  weight: PropTypes.string,
+  height: PropTypes.number.isRequired,
+  weight: PropTypes.number.isRequired,
   img_pokemon: PropTypes.string.isRequired,
   front_default: PropTypes.string,
   back_default: PropTypes.string,
