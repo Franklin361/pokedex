@@ -8,19 +8,28 @@ Este es un proyecto realizado para la empresa **VINCO ORBIS** para la posición 
 
 Pantalla de inicio de la app.
 ![screen 1](/public/screen-1.png)
+<br/>
+
 Pantalla mostrando los detalles del pokémon.
 ![screen 2](/public/screen-2.png)
+<br/>
+
 Pantalla mostrando el menu desplegable que contiene la colección de pokemon que ha creado el usuario.
 ![screen 3](/public/screen-3.png)
+<br/>
+
 Pantalla mostrando una gráfica con los tipos de pokémon en base a los de su colección.
 ![screen 4](/public/screen-4.png)
 
 ### Principales características. 🧐
 
-- [x] Un buscador de Pokémon el cual me permita localizarlos por nombre.
-- [x] Agregar uno o varios Pokémon buscados a mi colección desde los resultados de búsqueda
-- [x] Poder visualizar mi colección de los Pokémon que he añadido, permitiéndome cambiar cantidades o eliminar todos en una sola acción.
-- [x] Una gráfica que me permita visualizar un desglose de los **tipos de pokémon de acuerdo con el conteo que se encuentre en mi colección**.
+- [x] Buscar pokémon por nombre.
+- [x] Agregar pokémon a la colección desde los resultados de busqueda.
+- [x] Ver el listado de pokemon que se han agregado a la colección.
+- [x] Eliminar pokémon de la colección.
+- [x] Eliminar todos los pokemones de la colección, en una sola acción.
+- [x] Observar una gráfica que contenga los tipos de pokémon de acuerdo con el conteo que se encuentre en mi colección.
+- [x] Almacenar la colección de pokemon en el **local storage**
 
 ## Tecnologías usadas. 🧪
 
