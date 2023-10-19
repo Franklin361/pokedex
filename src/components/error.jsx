@@ -12,7 +12,6 @@ export const PokemonNotFound = ({ error }) => {
             <img
               src="https://cdn-icons-png.flaticon.com/128/1752/1752875.png"
               alt="not found"
-              className=''
             />
           </div>
         )

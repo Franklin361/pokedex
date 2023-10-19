@@ -60,6 +60,16 @@ export const Drawer = () => {
             </header>
 
             <div className=' md:mt-10 mt-4 flex flex-col gap-10 md:p-6 p-10 md:pt-4 pt-8 h-[370px] overflow-y-scroll'>
+              {pokemonsCollection.length === 0 && (
+                <div className='flex justify-center items-center gap-5 flex-col'>
+                  <span className='font-semibold text-gray-400'>There are no pokemon in your collection</span>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/128/1752/1752735.png"
+                    alt="not found"
+                    className='grayscale'
+                  />
+                </div>
+              )}
               {
                 pokemonsCollection.map(pokemon => (
                   <PokemonItemDrawer pokemon={pokemon} key={pokemon.id} />
