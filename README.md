@@ -4,7 +4,7 @@ Este es un proyecto realizado para la empresa **VINCO ORBIS** para la posición 
 
 ![Project view](/public/demo.gif)
 
-### Capturas de pantalla. 📷
+## Capturas de pantalla. 📷
 
 Pantalla de inicio de la app.
 ![screen 1](/public/screen-1.png)
@@ -21,7 +21,7 @@ Pantalla mostrando el menu desplegable que contiene la colección de pokemon que
 Pantalla mostrando una gráfica con los tipos de pokémon en base a los de su colección.
 ![screen 4](/public/screen-4.png)
 
-### Principales características. 🧐
+## Principales características. 🧐
 
 - [x] Buscar pokémon por nombre.
 - [x] Agregar pokémon a la colección desde los resultados de busqueda.
