@@ -16,6 +16,7 @@ export const Drawer = () => {
       <button
         className='p-3 border border-black flex justify-center items-center gap-2 bg-orange-400 hover:bg-orange-500 font-semibold text-white rounded-lg shadow-lg shadow-black/40 md:w-fit w-full flex-1'
         onClick={() => setOpen(true)}
+        data-testid="collection-drawer-btn"
       >
         <BsCollection />
         collection

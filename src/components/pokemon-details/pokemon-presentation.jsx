@@ -9,13 +9,14 @@ export const PokemonPresentation = (props) => {
       <img
         src={props.img_pokemon}
         className='w-48 h-auto'
+        alt={props.name}
       />
 
       <div className='flex justify-between items-center overflow-x-scroll mt-3'>
-        {props?.front_default && <img src={props.front_default} className='' alt="back_default" />}
-        {props?.back_default && <img src={props.back_default} className='' alt="back_default" />}
-        {props?.front_shiny && <img src={props.front_shiny} className='' alt="back_default" />}
-        {props?.back_shiny && <img src={props.back_shiny} className='' alt="back_default" />}
+        {props?.front_default && <img src={props.front_default} alt="front_default" />}
+        {props?.back_default && <img src={props.back_default} alt="back_default" />}
+        {props?.front_shiny && <img src={props.front_shiny} alt="front_shiny" />}
+        {props?.back_shiny && <img src={props.back_shiny} alt="back_shiny" />}
       </div>
 
       <div className='flex gap-5 mt-5 items-center'>

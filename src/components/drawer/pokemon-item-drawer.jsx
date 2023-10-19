@@ -11,6 +11,7 @@ export const PokemonItemDrawer = ({ pokemon }) => {
       <img
         src={pokemon.front_default}
         className='sm:w-full w-20 h-auto scale-[1.5] sm:scale-[2]'
+        alt={`${pokemon.name}-collection`}
       />
       <div className='flex flex-col justify-between  h-full'>
         <span className='font-bold md:text-xl text-2xl text-end'>{pokemon.name}</span>
