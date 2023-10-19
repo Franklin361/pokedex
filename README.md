@@ -44,26 +44,56 @@ Pantalla mostrando una gráfica con los tipos de pokémon en base a los de su co
 
 Tener instalado en tu dispositivo:
 
-- **Node JS versión >= 16**
-- **Git**
+- [Node JS](https://nodejs.org/en) versión >= 16
+- [Git](https://git-scm.com/)
 
-#### 1. Clona el repositorio.
+#### 1. Clonar el repositorio.
+
+Usando [Git](https://git-scm.com/), ejecutamos el siguiente comando en la terminal, el la carpeta donde quiera clonar el proyecto
 
 ```bash
  git clone https://github.com/Franklin361/pokedex
 ```
 
-### 2. Ejecuta este comando para instalar las dependencias.
+### 2. Instalar dependencias.
+
+Ejecuta este comando para instalar las dependencias del proyecto.
 
 ```bash
  npm install
 ```
 
-### 3. Ejecute este comando para levantar el servidor de desarrollo.
+### 3. Levantar el servidor de desarrollo.
+
+Ejecute este comando para levantar el servidor de desarrollo.
 
 ```bash
  npm run dev
 ```
+
+### 4. Ejución de pruebas.
+
+Para ejecutar las pruebas debe haber seguido todos los pasos anteriores sobre la instalación del proyecto.
+
+#### Antes de ejecutar las pruebas ...
+
+Primero debe tener levantado el servidor de desarrollo, usando el siguiente comando que se mostro anteriormente.
+
+Esto es debido a que las pruebas son **end-to-end** (usando [playwright](https://playwright.dev/))
+
+```bash
+ npm run dev
+```
+
+#### Ejecute este comando para correr las pruebas
+
+Una vez levantado el servidor de desarrollo, puede ejecutar el siguiente comando para correr las pruebas.
+
+```bash
+ npm run test
+```
+
+_En la consola le mostrará los resultados._
 
 ## Enlaces. ⛓️
 
